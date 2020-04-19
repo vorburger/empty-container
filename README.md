@@ -40,3 +40,11 @@ root@8c63ca822900:/share# exit
 exit
 #
 ```
+
+
+See also
+======
+* https://blog.hypriot.com/post/build-smallest-possible-docker-image/
+* https://xebia.com/blog/create-the-smallest-possible-docker-container/ with only a minimal web server in Go.
+  This is more suitable as an "empty" container for environments which expect, and check, that "something is running",
+  such as the default service on Google App Engine.
