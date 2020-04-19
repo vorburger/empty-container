@@ -13,9 +13,9 @@ RUN nasm -f elf64 /pause.asm && \
     ld -s -o /pause /pause.o
 
 FROM scratch
-COPY --from=builder /pause /bin/sh
+COPY --from=builder /pause /bin/pause
 VOLUME /share
 COPY share/ /share/
 USER 65535
-CMD ['']
+CMD ["/bin/pause"]
 
