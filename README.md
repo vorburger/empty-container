@@ -27,19 +27,10 @@ docker build -t empty-container .
 docker run -d --net=none --restart=always --name=storage emtpy-container
 ```
 
-From dockerhub:
-
-```
-docker pull frameloss/empty-container
-docker run --net=none --restart=always --name=storage -d frameloss/empty-container
-```
-
-Use the `--volumes-from=storage` flag to connect it to another container.
 
 For example:
 
 ```
-# docker pull frameloss/empty-container
 # docker run --net=none --restart=always --name=storage -d frameloss/empty-container
 # docker run -ti --rm --volumes-from=storage debian bash
 root@8c63ca822900:/# cd /share
