@@ -13,7 +13,6 @@ RUN nasm -f elf64 /pause.asm && \
     ld -s -o /pause /pause.o
 
 FROM scratch
-MAINTAINER frameloss
 COPY --from=builder /pause /bin/sh
 VOLUME /share
 COPY share/ /share/
